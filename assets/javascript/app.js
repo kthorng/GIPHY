@@ -3,6 +3,7 @@ console.log('I been logged');
 // Initial array of topics
 var topics = ['WOLVERINE', 'HULK', 'IRON MAN', 'SPIDER-MAN', 'THOR', 'GROOT', 'QUICKSILVER', 'BLACK PANTHER', 'STAR-LORD', 'ANT-MAN']
 var offset = 0;
+var limit = 12;
 // var clicked = ['Venom'];
 // var topicConfirm = 0 ;
 // console.log('topic confirm = ' + topicConfirm);
@@ -11,7 +12,7 @@ var offset = 0;
 function displayGif() {
 
   var topic = $(this).attr("data-name");
-  var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=jNTy87RK0F32LVQNU906RhHbGtNvto2S&q=" + topic + "&limit=12&offset=" + offset + "&rating=R&lang=en"
+  var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=jNTy87RK0F32LVQNU906RhHbGtNvto2S&q=" + topic + "&limit=" + limit + "&offset=" + offset + "&rating=R&lang=en"
   // empty our gif-dump div before rendering new gifs
   $("#gif-dump").empty();
 
@@ -70,11 +71,15 @@ function displayGif() {
     // increases our offset by each initial click to randomize the search
     offset++;
     
-    // $('#add-gifs').show();
+    // $('#add-gif').show();
     }
   });
 
 }
+
+// $('#add-gif').on('click', function(){
+//   limit++;
+// })
 
 // Function for displaying our hero buttons
 function renderButtons() {
