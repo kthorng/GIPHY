@@ -1,9 +1,9 @@
 console.log('I been logged');
 
 // Initial array of topics
-var topics = ['WOLVERINE', 'HULK', 'IRON MAN', 'SPIDER-MAN', 'THOR', 'GROOT', 'LOKI', 'QUICKSILVER', 'BLACK PANTHER', 'STAR-LORD', 'MAGNETO', 'ANT-MAN']
+var topics = ['WOLVERINE', 'HULK', 'IRON MAN', 'SPIDER-MAN', 'THOR', 'GROOT', 'QUICKSILVER', 'BLACK PANTHER', 'STAR-LORD', 'ANT-MAN']
 var offset = 0;
-// var clicked = [];
+// var clicked = ['Venom'];
 // var topicConfirm = 0 ;
 // console.log('topic confirm = ' + topicConfirm);
 
@@ -12,7 +12,7 @@ function displayGif() {
 
   var topic = $(this).attr("data-name");
   var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=jNTy87RK0F32LVQNU906RhHbGtNvto2S&q=" + topic + "&limit=12&offset=" + offset + "&rating=R&lang=en"
-  // empty our gif-dump div before rendering new buttons
+  // empty our gif-dump div before rendering new gifs
   $("#gif-dump").empty();
 
   // Creating an AJAX call for the specific hero button being clicked
@@ -70,7 +70,7 @@ function displayGif() {
     // increases our offset by each initial click to randomize the search
     offset++;
     
-    $('#add-gifs').show();
+    // $('#add-gifs').show();
     }
   });
 
@@ -88,9 +88,9 @@ function renderButtons() {
     // Then dynamicaly generating buttons for each hero in the array
     var a = $("<button>");
     // Adding a class of topic-btn to our button
-    a.addClass("topic-btn");
+    a.addClass("btn btn-danger btn-sm ml-md-auto topic-btn");
     // Adding a data-attribute
-    // a.attr("data-name", topics[i]).attr("onclick", "duplicate()");
+    // a.attr("data-name", topics[i]).attr("onclick", "cloneButton()");
     a.attr("data-name", topics[i]);
     // Providing the initial button text
     a.text(topics[i]);
@@ -146,12 +146,24 @@ $('#gif-dump').on('click', '.gif', function() {
   }
 });
 
-// var i = 0;
-// var original = document.getElementById('add-gifs');
 
-// function duplicate() {
-//     var clone = original.cloneNode(true); // "deep" clone
-//     clone.id = "topic-btn";
-//     // or clone.id = ""; if the divs don't need an ID
-//     original.parentNode.appendChild(clone);
+// function cloneButton() {
+//   // Deleting the heros prior to adding new heros
+//   $("#add-gifs").empty();
+
+//   // Looping through the array of heros
+//   // for (var i = 0; i < topics.length; i++) {
+
+//     // Then dynamicaly generating buttons for each hero in the array
+//     var b = $("<button>");
+//     // Adding a class of topic-btn to our button
+//     b.addClass("topic-btn");
+//     // Adding a data-attribute
+//     b.attr("data-name", clicked);
+//     // a.attr("data-name", topics[i]).attr("id", "buttons");
+//     // Providing the initial button text
+//     b.text(clicked);
+//     // Adding the button to the gif-buttons div
+//     $("#add-gifs").append(b);
+//   // }
 // }

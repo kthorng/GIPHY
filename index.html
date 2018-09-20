@@ -11,18 +11,18 @@
     <!-- The style -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <!-- The page icon -->
-    <!-- <link rel="icon" href="#"> -->
+    <link rel="icon" href="assets/images/kapow.png">
     <!-- The font -->
-    <!-- <link href="#" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Indie+Flower|Permanent+Marker|Shadows+Into+Light" rel="stylesheet">
 
   </head>
   <body>
     <!-- top of page -->
     <div class="container">
-      <div class="row" id="top">
+      <div class="row justify-content-between" id="top">
           <div class="col-md-12 text-center">
               <div id='gif-buttons'>
-                <!-- where out buttons get dumped -->
+                <!-- where buttons get dumped -->
               </div>
               <hr>
           </div>
@@ -30,16 +30,26 @@
       <!-- middle of the page -->
       <div class="row" id="middle">
           <!-- Where our instructions go -->
-          <div class="col-md-2">
+          <div class="col-md-2 form-group">
+                <div id="add-gifs">
+                    
+                </div>
+                <form id="topic-form">
+                    <div class="form-group">
+                          <label for="topic-input">Add All The Gifs!</label>
+                          <input type="text" class="form-control" id="topic-input" placeholder="Swoosh">
+                    </div>
+                        <button id="add-topic" type="submit" class="btn btn-warning">KAPOW</button>
+                </form>
               <!-- Where our bootstrap add item form code goes -->
-              <form id="topic-form">
-                  <label for="topic-input">Add a Topic, Yo!</label>
-                  <input type="text" id="topic-input">
+              <!-- <form id="topic-form"> -->
+                  <!-- <label for="topic-input">Add a Topic, Yo!</label> -->
+                  <!-- <input type="text" id="topic-input"> -->
                   <br>
             
                   <!-- Button triggers new movie to be added -->
-                  <input id="add-topic" type="submit" value="Add a Topic, Yo!">
-                  <input id="add-gifs" type="button" value="MOAR GIFS!">
+                  <!-- <input id="add-topic" type="submit" value="Add a Topic, Yo!"> -->
+                  <!-- <input id="add-gifs" type="button" value="MOAR GIFS!"> -->
                 </form>
           </div>
           <div class="col-md-10">

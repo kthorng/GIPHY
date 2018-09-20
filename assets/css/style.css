@@ -1,7 +1,41 @@
+body {
+    background: #ffcc00;
+}
+
 .gif {
     padding: 0px;
 }
 
-#add-gifs {
+/* #add-gifs {
     display: none;
-}
+} */
+
+button{
+    margin: 13px 12px 12px 10px;
+    font-family: 'Permanent Marker', cursive;
+  }
+
+  #middle {
+    font-family: 'Gloria Hallelujah', cursive;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: lightgray;
+  }
+
+  #gif-dump {
+    font-family: 'Shadows Into Light', cursive;
+  }
+
+  #top {
+      background: #ffcc00;
+  }
+
+  #bottom {
+    font-family: 'Indie Flower', cursive;
+    background: #ffcc00;
+  }
+
+  /* .form-group {
+      margin-left: 5px;
+  } */
+
